@@ -1,0 +1,16 @@
+{
+    "apps": [
+      {
+        "name": "my-node-app",
+        "script": "npm",
+        "args": "run dev",
+        "watch": true,
+        "env": {
+          "NODE_ENV": "production",
+          "MONGODB_URL": "mongodb+srv://jayshreeadikane:GXMacPjQ4V96PS3V@cluster0.x1pc8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+        },
+        "exec_mode": "fork"
+      }
+    ]
+  }
+  
