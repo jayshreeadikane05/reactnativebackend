@@ -7,7 +7,7 @@ var indexRouter = require("./routes/index");
 var apiRouter = require("./routes/api");
 var apiResponse = require("./helpers/apiResponse");
 var cors = require("cors");
-const fileUpload = require('express-fileupload');
+
 
 // DB connection
 var MONGODB_URL = process.env.MONGODB_URL;
@@ -38,7 +38,7 @@ if(process.env.NODE_ENV !== "test") {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(fileUpload());
+
 app.use(cors());
 
 app.use("/api", apiRouter);

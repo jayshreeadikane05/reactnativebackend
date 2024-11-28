@@ -4,7 +4,9 @@ const vechicalDetailsController = require("../controllers/vechicalDetailsControl
 
 
 router.post('/vechical', vechicalDetailsController.addVehicle);
-
+router.get('/vechical/:id', vechicalDetailsController.getByIdvechical);
+router.get('/vechical', vechicalDetailsController.getAllVehicles);
+router.put('/vechical/:id', vechicalDetailsController.updateVehicles);
 
 
 router.get("/test", (req, res) => {
