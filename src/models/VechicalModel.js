@@ -60,6 +60,12 @@ const vehicleSchema = new mongoose.Schema(
                 required: false,
             },
         },
+        status: {
+            type: Number,
+            required: true,
+            enum: [0, 1], // 0 for buy, 1 for sold
+            default: 0,  // Default to 0 (available for purchase)
+        },
     },
     {
         timestamps: true, // Automatically add createdAt and updatedAt fields
